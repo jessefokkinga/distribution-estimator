@@ -10,7 +10,7 @@ def generate_plot(nr_observations, data):
     
     plt.figure(figsize=(15,8))
     
-    # Set up the plot by using the point predictions, actual values and the computed upper and lower bounds.
+    # Plotting the point predictions, actual values and the computed upper and lower bounds of prediction intervals
     ax = sns.scatterplot(data=data_to_plot, x=data_to_plot.index, y='predictions', legend=False, color = 'blue')
     sns.scatterplot(data=data_to_plot, x=data_to_plot.index, y='actuals', legend=False, color = 'red')
     sns.scatterplot(data=data_to_plot, x=data_to_plot.index, y='upper_bounds', legend=False, color = 'blue', alpha = 0.5)
